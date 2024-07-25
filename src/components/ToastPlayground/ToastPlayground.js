@@ -11,7 +11,13 @@ function ToastPlayground() {
 
   const [message, setMessage] = React.useState('')
   const [toastVariant, setToastVariant] = React.useState('notice')
-  const [toasts, setToasts] = React.useState([])
+  const [toasts, setToasts] = React.useState([
+    {
+      id: crypto.randomUUID(),
+      message: 'Toast example!',
+      variant: 'notice',
+    },
+  ])
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -20,9 +26,10 @@ function ToastPlayground() {
       variant: toastVariant,
       message: message
     }
+
     setToasts((previusToast) => [...previusToast, nextToast])
     setMessage('')
-    setToasts('')
+    setToastVariant(VARIANT_OPTIONS[0])
   }
 
   return (
