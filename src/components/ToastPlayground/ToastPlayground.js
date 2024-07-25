@@ -10,8 +10,6 @@ function ToastPlayground() {
 
   const [message, setMessage] = React.useState('')
   const [toastVariant, setToastVariant] = React.useState('notice')
-  console.log(message)
-  console.log(toastVariant)
 
   function handleSubmit(e) {
     e.preventDefault()
