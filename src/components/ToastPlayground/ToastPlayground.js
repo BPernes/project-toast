@@ -46,6 +46,7 @@ function ToastPlayground() {
             <textarea
               id="message"
               className={styles.messageInput}
+              value={message}
               onChange={(e) => setMessage(e.target.value)}
             />
           </div>
